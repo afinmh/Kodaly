@@ -12,11 +12,10 @@ Sistem pengenalan gesture berbasis MediaPipe untuk deteksi nada musik menggunaka
 
 ### 🏗️ ARSITEKTUR SISTEM
 ```
-PAK_ICHWAN/
+/
 ├── collect_dataset.py     # Dataset collection dengan MediaPipe
-├── train_new_models.py    # Training dengan RF/KNN/SVM comparison
+├── train_models.py    # Training dengan RF/KNN/SVM comparison
 ├── main_smart.py          # Program utama (updated)
-├── main_smart_new.py      # Program utama (versi baru)
 ├── model_baru/           # Model hasil training
 │   ├── kanan_RandomForest/
 │   ├── kanan_SVM/        # ✅ Best for right hand
