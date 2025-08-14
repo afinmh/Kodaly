@@ -11,7 +11,7 @@ class DatasetCollector:
         self.mp_hands = mp.solutions.hands
         
         # Dataset configuration
-        self.base_dataset_dir = "dataset_collection2"
+        self.base_dataset_dir = "dataset"
         
         # Class definitions
         self.left_hand_classes = ["low", "medium", "high"]
@@ -22,7 +22,7 @@ class DatasetCollector:
         self.current_class = None
         self.is_collecting = False
         self.collected_samples = 0
-        self.samples_per_class = 200
+        self.samples_per_class = 100
         
         # Data storage
         self.current_data = []

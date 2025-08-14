@@ -22,17 +22,14 @@ class ModelLoader:
         if os.path.exists(best_info_path):
             with open(best_info_path, 'r') as f:
                 content = f.read()
-                # Extract algorithm name
                 for line in content.split('\n'):
                     if line.startswith('Best Algorithm:'):
                         algorithm = line.split(':')[1].strip()
                         return algorithm
-        
-        # Fallback: look for any available model
+
         if os.path.exists(self.models_base_path):
             for item in os.listdir(self.models_base_path):
                 if hand_type in item and not item.startswith('BEST_'):
-                    # Extract algorithm from folder name (e.g., "RF_kiri" -> "RF")
                     algorithm = item.split('_')[0]
                     return algorithm
         
@@ -52,12 +49,10 @@ class ModelLoader:
             return None, None, None
         
         try:
-            # Load model
             model_path = os.path.join(model_dir, "model.pkl")
             with open(model_path, 'rb') as f:
                 model = pickle.load(f)
-            
-            # Load scaler (if exists)
+
             scaler_path = os.path.join(model_dir, "scaler.pkl")
             scaler = None
             if os.path.exists(scaler_path):
@@ -74,11 +69,8 @@ class ModelLoader:
     def load_all_models(self):
         """Load both hand models"""
         print("🤖 Loading gesture recognition models...")
-        
-        # Load right hand model (notes)
+
         self.right_hand_model, self.right_hand_scaler, self.right_algorithm = self.load_model("kanan")
-        
-        # Load left hand model (height)
         self.left_hand_model, self.left_hand_scaler, self.left_algorithm = self.load_model("kiri")
         
         print(f"📊 Right hand: {self.right_algorithm if self.right_algorithm else 'Not available'}")
