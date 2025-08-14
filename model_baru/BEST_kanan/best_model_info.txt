@@ -1,0 +1,5 @@
+Best Algorithm: SVM
+Accuracy: 0.9929
+CV Score: 0.9946 (+/- 0.0087)
+Parameters: {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
+Model Path: model_baru/SVM_kanan/

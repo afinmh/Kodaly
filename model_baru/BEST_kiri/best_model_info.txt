@@ -1,0 +1,5 @@
+Best Algorithm: SVM
+Accuracy: 0.9833
+CV Score: 0.9958 (+/- 0.0102)
+Parameters: {'C': 100, 'gamma': 0.01, 'kernel': 'rbf'}
+Model Path: model_baru/SVM_kiri/
