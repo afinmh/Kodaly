@@ -15,7 +15,7 @@ from collections import Counter
 
 class ModelTrainer:
     def __init__(self):
-        self.dataset_path = "dataset_collection2"
+        self.dataset_path = "dataset_200"
         self.models_base_path = "model_baru"
         self.algorithms = {
             'RF': RandomForestClassifier,
